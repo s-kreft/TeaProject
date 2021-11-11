@@ -4,8 +4,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TeaService {
-    public Tea getTea() {
-        Tea tea = new Tea("Yunnan", "Green", 35.5);
-        return tea;
+    public String getItemList() {
+        Tea herbata1 = new Tea("Zao Chun", TeaType.GREEN, "Yunnan", 35.5 );
+
+        return herbata1.toString();
     }
 }

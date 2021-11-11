@@ -13,7 +13,7 @@ public class TeaRestController {
     }
     @GetMapping("/tea")
     public ResponseEntity returnTeaType() {
-        return ResponseEntity.ok(teaService.getTea());
+        return ResponseEntity.ok(teaService.getItemList());
     }
 
 }

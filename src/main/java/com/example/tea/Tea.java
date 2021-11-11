@@ -1,17 +1,17 @@
 package com.example.tea;
 
-public class Tea {
-    private String name;
-    private String type;
-    private double price;
+public class Tea extends Item {
+    private TeaType teaType;
+    private String region;
 
     public Tea() {
 
     }
-    public Tea(String name, String type, double price) {
+    public Tea(String name, TeaType teaType, String region, double price) {
         this.name=name;
-        this.type=type;
+        this.teaType=teaType;
         this.price=price;
+        this.region=region;
     }
 
     public String getName() {
@@ -22,12 +22,12 @@ public class Tea {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public TeaType getTeaType() {
+        return teaType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setTeaType(TeaType teaType) {
+        this.teaType = teaType;
     }
 
     public double getPrice() {
@@ -38,12 +38,21 @@ public class Tea {
         this.price = price;
     }
 
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
     @Override
     public String toString() {
         return "Tea{" +
                 "name='" + name + '\'' +
-                ", type='" + type + '\'' +
+                ", teaType=" + teaType +
                 ", price=" + price +
+                ", region='" + region + '\'' +
                 '}';
     }
 }
